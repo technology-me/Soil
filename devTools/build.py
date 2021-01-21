@@ -1,4 +1,6 @@
-from JsonBuilder.hamal import *
+import hamal
+import os
 
-write('test.soil','name','test')
-print("test.soil built sucessfully",read('test.soil',all))
+path = os.path.abspath(os.path.dirname(os.getcwd())) + '/test.soil'
+hamal.write(path,'name','test')
+print(hamal.read(path,all))
